@@ -1,25 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26668" started-at="2020-10-08T12:47:36 IST" finished-at="2020-10-08T12:48:03 IST">
+  <suite name="Default suite" duration-ms="64338" started-at="2020-10-08T16:49:49 IST" finished-at="2020-10-08T16:50:53 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26668" started-at="2020-10-08T12:47:36 IST" finished-at="2020-10-08T12:48:03 IST">
+    <test name="Default test" duration-ms="64338" started-at="2020-10-08T16:49:49 IST" finished-at="2020-10-08T16:50:53 IST">
       <class name="com.test.BaseTest">
-        <test-method status="PASS" signature="createDriver()[pri:0, instance:com.test.BaseTest@1f7030a6]" name="createDriver" is-config="true" duration-ms="12226" started-at="2020-10-08T12:47:36 IST" description="Opening Browser" finished-at="2020-10-08T12:47:48 IST">
+        <test-method status="PASS" signature="createDriver()[pri:0, instance:com.test.BaseTest@1786dec2]" name="createDriver" is-config="true" duration-ms="15632" started-at="2020-10-08T16:49:49 IST" description="Opening Browser" finished-at="2020-10-08T16:50:04 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method status="PASS" signature="searchtest()[pri:3, instance:com.test.BaseTest@1f7030a6]" name="searchtest" duration-ms="4525" started-at="2020-10-08T12:47:49 IST" finished-at="2020-10-08T12:47:53 IST">
+        <test-method status="PASS" signature="verifyHomepagePageTest()[pri:1, instance:com.test.BaseTest@1786dec2]" name="verifyHomepagePageTest" duration-ms="123" started-at="2020-10-08T16:50:04 IST" finished-at="2020-10-08T16:50:05 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHomepagePageTest -->
+        <test-method status="PASS" signature="doLoginTest()[pri:2, instance:com.test.BaseTest@1786dec2]" name="doLoginTest" duration-ms="7519" started-at="2020-10-08T16:50:05 IST" finished-at="2020-10-08T16:50:12 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doLoginTest -->
+        <test-method status="PASS" signature="searchtest()[pri:3, instance:com.test.BaseTest@1786dec2]" name="searchtest" duration-ms="7852" started-at="2020-10-08T16:50:12 IST" finished-at="2020-10-08T16:50:20 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchtest -->
-        <test-method status="PASS" signature="FilterSearch()[pri:4, instance:com.test.BaseTest@1f7030a6]" name="FilterSearch" duration-ms="9110" started-at="2020-10-08T12:47:53 IST" finished-at="2020-10-08T12:48:02 IST">
+        <test-method status="PASS" signature="FilterSearch()[pri:4, instance:com.test.BaseTest@1786dec2]" name="FilterSearch" duration-ms="14081" started-at="2020-10-08T16:50:20 IST" finished-at="2020-10-08T16:50:34 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FilterSearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.BaseTest@1f7030a6]" name="tearDown" is-config="true" duration-ms="739" started-at="2020-10-08T12:48:02 IST" finished-at="2020-10-08T12:48:03 IST">
+        <test-method status="PASS" signature="getNames()[pri:5, instance:com.test.BaseTest@1786dec2]" name="getNames" duration-ms="1018" started-at="2020-10-08T16:50:34 IST" finished-at="2020-10-08T16:50:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getNames -->
+        <test-method status="PASS" signature="writeExcel()[pri:6, instance:com.test.BaseTest@1786dec2]" name="writeExcel" duration-ms="15839" started-at="2020-10-08T16:50:35 IST" finished-at="2020-10-08T16:50:51 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- writeExcel -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.BaseTest@1786dec2]" name="tearDown" is-config="true" duration-ms="2171" started-at="2020-10-08T16:50:51 IST" finished-at="2020-10-08T16:50:53 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

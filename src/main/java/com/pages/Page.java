@@ -1,5 +1,7 @@
 package com.pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -22,7 +24,10 @@ public abstract class Page {
 	
 	public abstract WebElement getElement(By location);
 	
+	public abstract List<WebElement> getElements(By location);
+	
 	public abstract void waitforElement(By location);
+	
 	
 	public abstract void waitforPageTitle(String title);
 	

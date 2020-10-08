@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\ACER\AppData\Local\Temp\testng-eclipse--1902132851\testng-customsuite.xml</span>
+                    <span>C:\Users\HP\AppData\Local\Temp\testng-eclipse-1190776398\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -109,7 +109,27 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.BaseTest" hash-for-method="doLoginTest">doLoginTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.BaseTest" hash-for-method="getNames">getNames</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.BaseTest" hash-for-method="searchtest">searchtest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.BaseTest" hash-for-method="verifyHomepagePageTest">verifyHomepagePageTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.BaseTest" hash-for-method="writeExcel">writeExcel</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -139,9 +159,37 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="doLoginTest">
+                  </a> <!-- doLoginTest -->
+                  <span class="method-name">doLoginTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="getNames">
+                  </a> <!-- getNames -->
+                  <span class="method-name">getNames</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="searchtest">
                   </a> <!-- searchtest -->
                   <span class="method-name">searchtest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyHomepagePageTest">
+                  </a> <!-- verifyHomepagePageTest -->
+                  <span class="method-name">verifyHomepagePageTest</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="writeExcel">
+                  </a> <!-- writeExcel -->
+                  <span class="method-name">writeExcel</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,7 +197,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\ACER\AppData\Local\Temp\testng-eclipse--1902132851\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\HP\AppData\Local\Temp\testng-eclipse-1190776398\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -198,20 +246,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'FilterSearch')
+data.setCell(0, 1, 'writeExcel')
 data.setCell(0, 2, 'com.test.BaseTest')
-data.setCell(0, 3, 9110);
+data.setCell(0, 3, 15839);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'searchtest')
+data.setCell(1, 1, 'FilterSearch')
 data.setCell(1, 2, 'com.test.BaseTest')
-data.setCell(1, 3, 4525);
+data.setCell(1, 3, 14081);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'searchtest')
+data.setCell(2, 2, 'com.test.BaseTest')
+data.setCell(2, 3, 7852);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'doLoginTest')
+data.setCell(3, 2, 'com.test.BaseTest')
+data.setCell(3, 3, 7519);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'getNames')
+data.setCell(4, 2, 'com.test.BaseTest')
+data.setCell(4, 3, 1018);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'verifyHomepagePageTest')
+data.setCell(5, 2, 'com.test.BaseTest')
+data.setCell(5, 3, 123);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 seconds</span>
+              <span class="suite-total-time">Total running time: 46 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -243,16 +307,32 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
+                <span class="method-name">verifyHomepagePageTest</span>
+                <span class="method-start">15686 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">doLoginTest</span>
+                <span class="method-start">15824 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
                 <span class="method-name">searchtest</span>
-                <span class="method-start">12274 ms</span>
+                <span class="method-start">23346 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">FilterSearch</span>
-                <span class="method-start">16811 ms</span>
+                <span class="method-start">31203 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">getNames</span>
+                <span class="method-start">45291 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">writeExcel</span>
+                <span class="method-start">46313 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">25921 ms</span>
+                <span class="method-start">62155 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

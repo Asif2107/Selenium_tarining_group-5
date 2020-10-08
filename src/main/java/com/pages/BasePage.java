@@ -1,4 +1,7 @@
 package com.pages;
+import java.util.ArrayList;
+import java.util.List;
+
 //https://github.com/Asif2107/Selenium_tarining_group-5.git
 //git@github.com:Asif2107/Selenium_tarining_group-5.git
 import org.openqa.selenium.By;
@@ -35,6 +38,8 @@ public class BasePage extends Page{
 		}
 		return null;
 	}
+	
+	
 
 	@Override
 	public void waitforElement(By location) {
@@ -57,6 +62,20 @@ public class BasePage extends Page{
 			e.printStackTrace();
 		}
 		
+	}
+
+	@Override
+	public List<WebElement> getElements(By location) {
+		List<WebElement> hweb=null;
+		try {
+			hweb=driver.findElements(location);
+			return hweb;
+		}
+		catch(Exception e) {
+			System.out.println("error occurred while finding elements"+location.toString());
+			e.printStackTrace();
+		}
+		return null;
 	}
 	
 	
