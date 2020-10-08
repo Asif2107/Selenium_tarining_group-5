@@ -10,6 +10,8 @@ import com.pages.BasePage;
 
 public class SearchPage extends BasePage{
 	
+	public static String Searchtitle=null;
+	
 	private By Searchbox=By.xpath("//*[contains(@data-qa-id, 'omni-searchbox-keyword')]");
 	private By localitybox=By.xpath("//*[contains(@data-qa-id, 'omni-searchbox-locality')]");
 	private By SearchButton=By.xpath("//*[@class='c-omni-suggestion-item__content__title' and text()='Hospital']");
@@ -28,7 +30,12 @@ public class SearchPage extends BasePage{
 	}
 	
 	public WebElement getSearchButton() {
+		waitforElement(SearchButton);
 		return getElement(SearchButton);
+	}
+	
+	public String getSearchPageTitle() {
+		return PageTitle();
 	}
 
 
@@ -38,6 +45,9 @@ public class SearchPage extends BasePage{
 		getLocalitybox().sendKeys(location);
 		getSearchbox().sendKeys(search);
 		getSearchButton().click();
+		Searchtitle=getSearchPageTitle();
+		System.out.println("Search Page Title-->"+Searchtitle);
+		
 
 }
 

@@ -1,5 +1,6 @@
 package com.pages;
-
+//https://github.com/Asif2107/Selenium_tarining_group-5.git
+//git@github.com:Asif2107/Selenium_tarining_group-5.git
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -29,7 +30,7 @@ public class BasePage extends Page{
 			element=driver.findElement(location);
 			return element;
 		}catch(Exception e) {
-			System.out.println("error occurred while finding elements");
+			System.out.println("error occurred while finding elements"+location.toString());
 			e.printStackTrace();
 		}
 		return null;
@@ -38,8 +39,10 @@ public class BasePage extends Page{
 	@Override
 	public void waitforElement(By location) {
 		try {
-			wait.until(ExpectedConditions.presenceOfElementLocated(location));
+			//wait.until(ExpectedConditions.presenceOfElementLocated(location));
+			wait.until(ExpectedConditions.visibilityOfElementLocated(location));
 		}catch(Exception e) {
+			System.out.println("error occurred while waiting for elements"+location.toString());
 			e.printStackTrace();
 		}
 		

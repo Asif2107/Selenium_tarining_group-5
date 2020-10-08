@@ -5,9 +5,9 @@
     <classes>
       <class name="com.test.BaseTest">
         <methods>
+          <include name="FilterSearch"/>
           <include name="tearDown"/>
           <include name="searchtest"/>
-          <include name="doLoginTest"/>
           <include name="createDriver"/>
         </methods>
       </class> <!-- com.test.BaseTest -->

@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 
 import com.pages.BasePage;
 import com.pages.Page;
+import com.pom.pages.FilterPage;
 import com.pom.pages.HomePage;
 import com.pom.pages.SearchPage;
 import com.pom.pages.loginPage;
@@ -46,30 +47,37 @@ public class BaseTest {
 		
 	}
 	
-	@Test(priority=1)
-	public void verifyHomepagePageTest() {
-		String title=page.getInstance(HomePage.class).getHomePageTItle();
-		String header=page.getInstance(HomePage.class).getHomePageHeader();
-		System.out.println("Title:-"+title);
-		System.out.println(header);
-		Assert.assertEquals(header, "How Practo is Helping India Fight COVID-19");
-	}
-
-	
-	@Test(priority=2)
-	public void doLoginTest() {
-
-		page.getInstance(loginPage.class).dologin("8910649914", "kVFAUvmz_F$7cGR");
-		//page.getInstance(loginPage.class).dologin(" ", "");
-		String title=page.getInstance(loginPage.class).getLoginPageTitle();
-		Assert.assertEquals(title, "Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests");
-	}
+//	@Test(priority=1)
+//	public void verifyHomepagePageTest() {
+//		String title=page.getInstance(HomePage.class).getHomePageTItle();
+//		String header=page.getInstance(HomePage.class).getHomePageHeader();
+//		System.out.println("Title:-"+title);
+//		System.out.println(header);
+//		Assert.assertEquals(header, "How Practo is Helping India Fight COVID-19");
+//	}
+//
+//	
+//	@Test(priority=2)
+//	public void doLoginTest() {
+//
+//		page.getInstance(loginPage.class).dologin("8910649914", "kVFAUvmz_F$7cGR");
+//		//page.getInstance(loginPage.class).dologin(" ", "");
+//		String title=page.getInstance(loginPage.class).getLoginPageTitle();
+//		Assert.assertEquals(title, "Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests");
+//	}
 	
 	@Test(priority=3)
-	public void searchtest() throws InterruptedException{
-		page.getInstance(SearchPage.class).dosearch("Hospital","Chenai");
-
-		Thread.sleep(6000);		
+	public void searchtest(){
+		page.getInstance(SearchPage.class).dosearch("Hospital","Kolkata");
+		page.getInstance(SearchPage.class);
+		String SearchPageTitle=SearchPage.Searchtitle;
+		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Kolkata - Book Appointment Online, View Fees, Reviews | Practo");
+		
+	}
+	
+	@Test(priority=4)
+	public void FilterSearch() throws Exception{
+		page.getInstance(FilterPage.class).dofilter();
 	}
 	
 	
