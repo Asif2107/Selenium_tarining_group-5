@@ -33,7 +33,7 @@ public class BaseTest {
 	{
 		
 			
-			String ChromePath = "C:\\Users\\HP\\eclipse-workspace\\Practo_Automation\\Driver\\chromedriver.exe";
+			String ChromePath = "C:\\Users\\user\\Desktop\\CTS_Onboarding\\Selenium Project\\Practo_AutomationFramework\\Chrome_Driver\\chromedriver.exe";
 			System.setProperty("webdriver.chrome.driver", ChromePath );
 		    driver=new ChromeDriver();
 			driver.manage().window().maximize();
