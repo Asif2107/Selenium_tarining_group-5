@@ -10,11 +10,14 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+import com.ScreenShot.CustomListener;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
@@ -29,11 +32,11 @@ import com.write.HospitalName;
 import com.write.WriteData;
 
 
-
+@Listeners(CustomListener.class)
 public class BaseTest {
 	
 	
-	WebDriver driver;
+	public static WebDriver driver;
 	public Page page;
 	List<String> name=null;
 	ExtentReports extent;
@@ -66,11 +69,8 @@ public class BaseTest {
 		
 
 			ExtentTest test= extent.createTest("Create Driver");
-			
-
-			
+						
 			String ChromePath = ".\\Chrome_Driver\\chromedriver.exe";
-
 			System.setProperty("webdriver.chrome.driver", ChromePath );
 		    driver=new ChromeDriver();
 			driver.manage().window().maximize();
@@ -139,7 +139,7 @@ public class BaseTest {
 		extent.flush();
 	}
 	
-	@Test(priority=6)
+	@AfterClass
 	public void writeExcel()throws FileNotFoundException, IOException 
 	{
 		ExtentTest test= extent.createTest("Write in Excel");
@@ -147,12 +147,14 @@ public class BaseTest {
 		extent.flush();
 	}
 	
-	@Test(priority=7)
+	@Test(priority=6)
 	public void SignOut() {
 		ExtentTest test= extent.createTest("Check Out from the account");
 		page.getInstance(LogoutPage.class).logOut();
 		extent.flush();
 	}
+	
+	
 	
 
 		

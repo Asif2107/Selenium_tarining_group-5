@@ -48,8 +48,6 @@ public class loginPage extends BasePage{
 	public HomePage dologin(String username, String pasw)
 	{
 		getSigninButton().click();
-		Title=getLoginPageTitle();
-		System.out.println("Title:-"+Title);
 		getEmailId().sendKeys(username);
 		getPassword().sendKeys(pasw);
 		getLoginButton().click();
@@ -65,6 +63,8 @@ public class loginPage extends BasePage{
 		getEmailId().sendKeys("");
 		getPassword().sendKeys("");
 		getLoginButton().click();
+		Title=getLoginPageTitle();
+		
 		
 	}
 

@@ -34,9 +34,7 @@ public class LogoutPage extends BasePage {
 	public void logOut() {
 		
 		getBacktoHome().click();
-		waitforElement(LogoutButton);
 		getDropeDown().click();
-		waitforElement(LogoutButton);
 		getLogoutButton().click();
 		
 	}

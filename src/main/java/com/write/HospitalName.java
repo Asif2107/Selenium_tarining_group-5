@@ -15,7 +15,6 @@ public class HospitalName extends BasePage {
 	
 	public HospitalName(WebDriver driver) {
 		super(driver);
-		// TODO Auto-generated constructor stub
 	}
 	
 	public List<WebElement> getHospitalsName() {
@@ -46,10 +45,10 @@ public class HospitalName extends BasePage {
 				}
 			}
 			
-			for(String s:hname)
-			{
-				System.out.println(s);
-			}
+//			for(String s:hname)
+//			{
+//				System.out.println(s);
+//			}
 			return hname;
 		
 		}
