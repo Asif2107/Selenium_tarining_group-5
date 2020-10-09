@@ -5,9 +5,8 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
-    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -24,7 +23,6 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
@@ -51,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\user\AppData\Local\Temp\testng-eclipse-1672620029\testng-customsuite.xml</span>
+                    <span>C:\Users\ACER\AppData\Local\Temp\testng-eclipse--1462914491\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods,   6 passed</span>
+                    <span class="method-stats">7 methods,   7 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -105,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.BaseTest" hash-for-method="FilterSearch">FilterSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="com.test.BaseTest" hash-for-method="SignOut">SignOut</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -159,6 +162,13 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
+                  <a name="SignOut">
+                  </a> <!-- SignOut -->
+                  <span class="method-name">SignOut</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="doLoginTest">
                   </a> <!-- doLoginTest -->
                   <span class="method-name">doLoginTest</span>
@@ -197,12 +207,12 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\user\AppData\Local\Temp\testng-eclipse-1672620029\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\ACER\AppData\Local\Temp\testng-eclipse--1462914491\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
@@ -246,36 +256,40 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(7);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'writeExcel')
+data.setCell(0, 1, 'SignOut')
 data.setCell(0, 2, 'com.test.BaseTest')
-data.setCell(0, 3, 17622);
+data.setCell(0, 3, 24733);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'searchtest')
+data.setCell(1, 1, 'FilterSearch')
 data.setCell(1, 2, 'com.test.BaseTest')
-data.setCell(1, 3, 10190);
+data.setCell(1, 3, 10809);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'FilterSearch')
+data.setCell(2, 1, 'searchtest')
 data.setCell(2, 2, 'com.test.BaseTest')
-data.setCell(2, 3, 7960);
+data.setCell(2, 3, 6319);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'doLoginTest')
 data.setCell(3, 2, 'com.test.BaseTest')
-data.setCell(3, 3, 5254);
+data.setCell(3, 3, 5809);
 data.setCell(4, 0, 4)
 data.setCell(4, 1, 'getNames')
 data.setCell(4, 2, 'com.test.BaseTest')
-data.setCell(4, 3, 471);
+data.setCell(4, 3, 2598);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyHomepagePageTest')
+data.setCell(5, 1, 'writeExcel')
 data.setCell(5, 2, 'com.test.BaseTest')
-data.setCell(5, 3, 429);
+data.setCell(5, 3, 1983);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'verifyHomepagePageTest')
+data.setCell(6, 2, 'com.test.BaseTest')
+data.setCell(6, 3, 201);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 41 seconds</span>
+              <span class="suite-total-time">Total running time: 52 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -308,40 +322,43 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-test before">
                 <span class="method-name">createDriver</span>
-                <span class="method-start">355 ms</span>
+                <span class="method-start">446 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">verifyHomepagePageTest</span>
-                <span class="method-start">20293 ms</span>
+                <span class="method-start">12973 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">doLoginTest</span>
-                <span class="method-start">20933 ms</span>
+                <span class="method-start">13324 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">searchtest</span>
-                <span class="method-start">26194 ms</span>
+                <span class="method-start">19139 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">FilterSearch</span>
-                <span class="method-start">36393 ms</span>
+                <span class="method-start">25465 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">getNames</span>
-                <span class="method-start">44358 ms</span>
+                <span class="method-start">36283 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">writeExcel</span>
-                <span class="method-start">44841 ms</span>
+                <span class="method-start">38887 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SignOut</span>
+                <span class="method-start">40875 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-test after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">62468 ms</span>
+                <span class="method-start">65621 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
-<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

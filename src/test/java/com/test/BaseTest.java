@@ -13,7 +13,6 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -23,6 +22,7 @@ import com.pages.BasePage;
 import com.pages.Page;
 import com.pom.pages.FilterPage;
 import com.pom.pages.HomePage;
+import com.pom.pages.LogoutPage;
 import com.pom.pages.SearchPage;
 import com.pom.pages.loginPage;
 import com.write.HospitalName;
@@ -31,12 +31,14 @@ import com.write.WriteData;
 
 
 public class BaseTest {
+	
+	
 	WebDriver driver;
 	public Page page;
 	List<String> name=null;
 	ExtentReports extent;
 	Properties property;
-
+	
 
 	@BeforeSuite
 	public void config()
@@ -67,7 +69,7 @@ public class BaseTest {
 			
 
 			
-			String ChromePath = "C:\\Users\\user\\Desktop\\CTS_Onboarding\\Selenium Project\\Practo_AutomationFramework\\Chrome_Driver\\chromedriver.exe";
+			String ChromePath = ".\\Chrome_Driver\\chromedriver.exe";
 
 			System.setProperty("webdriver.chrome.driver", ChromePath );
 		    driver=new ChromeDriver();
@@ -115,10 +117,9 @@ public class BaseTest {
 	public void searchtest()
 	{
 		ExtentTest test= extent.createTest("Searching");
-		page.getInstance(SearchPage.class).dosearch("Hospital","Kolkata");
-		page.getInstance(SearchPage.class);
+		page.getInstance(SearchPage.class).dosearch("Hospital","Chennai");
 		String SearchPageTitle=SearchPage.Searchtitle;
-		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Kolkata - Book Appointment Online, View Fees, Reviews | Practo");
+		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Chennai - Book Appointment Online, View Fees, Reviews | Practo");
 		extent.flush();
 	}
 	
@@ -145,6 +146,14 @@ public class BaseTest {
 		page.getInstance(WriteData.class).doWrite(name);
 		extent.flush();
 	}
+	
+	@Test(priority=7)
+	public void SignOut() {
+		ExtentTest test= extent.createTest("Check Out from the account");
+		page.getInstance(LogoutPage.class).logOut();
+		extent.flush();
+	}
+	
 
 		
 	@AfterTest

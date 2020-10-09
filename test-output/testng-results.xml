@@ -1,45 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="63655" started-at="2020-10-09T13:18:40 IST" finished-at="2020-10-09T13:19:44 IST">
+  <suite name="Default suite" duration-ms="65983" started-at="2020-10-09T10:43:42Z" finished-at="2020-10-09T10:44:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="63655" started-at="2020-10-09T13:18:40 IST" finished-at="2020-10-09T13:19:44 IST">
+    <test name="Default test" duration-ms="65983" started-at="2020-10-09T10:43:42Z" finished-at="2020-10-09T10:44:48Z">
       <class name="com.test.BaseTest">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.test.BaseTest@6ac13091]" name="config" is-config="true" duration-ms="345" started-at="2020-10-09T13:18:40 IST" finished-at="2020-10-09T13:18:40 IST">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.test.BaseTest@13b6aecc]" name="config" is-config="true" duration-ms="431" started-at="2020-10-09T10:43:41Z" finished-at="2020-10-09T10:43:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="PASS" signature="createDriver()[pri:0, instance:com.test.BaseTest@6ac13091]" name="createDriver" is-config="true" duration-ms="19889" started-at="2020-10-09T13:18:40 IST" description="Opening Browser" finished-at="2020-10-09T13:19:00 IST">
+        <test-method status="PASS" signature="createDriver()[pri:0, instance:com.test.BaseTest@13b6aecc]" name="createDriver" is-config="true" duration-ms="12509" started-at="2020-10-09T10:43:42Z" description="Opening Browser" finished-at="2020-10-09T10:43:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method status="PASS" signature="verifyHomepagePageTest()[pri:1, instance:com.test.BaseTest@6ac13091]" name="verifyHomepagePageTest" duration-ms="429" started-at="2020-10-09T13:19:00 IST" finished-at="2020-10-09T13:19:01 IST">
+        <test-method status="PASS" signature="verifyHomepagePageTest()[pri:1, instance:com.test.BaseTest@13b6aecc]" name="verifyHomepagePageTest" duration-ms="201" started-at="2020-10-09T10:43:54Z" finished-at="2020-10-09T10:43:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepagePageTest -->
-        <test-method status="PASS" signature="doLoginTest()[pri:2, instance:com.test.BaseTest@6ac13091]" name="doLoginTest" duration-ms="5254" started-at="2020-10-09T13:19:01 IST" finished-at="2020-10-09T13:19:06 IST">
+        <test-method status="PASS" signature="doLoginTest()[pri:2, instance:com.test.BaseTest@13b6aecc]" name="doLoginTest" duration-ms="5809" started-at="2020-10-09T10:43:55Z" finished-at="2020-10-09T10:44:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLoginTest -->
-        <test-method status="PASS" signature="searchtest()[pri:3, instance:com.test.BaseTest@6ac13091]" name="searchtest" duration-ms="10190" started-at="2020-10-09T13:19:06 IST" finished-at="2020-10-09T13:19:16 IST">
+        <test-method status="PASS" signature="searchtest()[pri:3, instance:com.test.BaseTest@13b6aecc]" name="searchtest" duration-ms="6319" started-at="2020-10-09T10:44:00Z" finished-at="2020-10-09T10:44:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchtest -->
-        <test-method status="PASS" signature="FilterSearch()[pri:4, instance:com.test.BaseTest@6ac13091]" name="FilterSearch" duration-ms="7960" started-at="2020-10-09T13:19:16 IST" finished-at="2020-10-09T13:19:24 IST">
+        <test-method status="PASS" signature="FilterSearch()[pri:4, instance:com.test.BaseTest@13b6aecc]" name="FilterSearch" duration-ms="10809" started-at="2020-10-09T10:44:07Z" finished-at="2020-10-09T10:44:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FilterSearch -->
-        <test-method status="PASS" signature="getNames()[pri:5, instance:com.test.BaseTest@6ac13091]" name="getNames" duration-ms="471" started-at="2020-10-09T13:19:24 IST" finished-at="2020-10-09T13:19:25 IST">
+        <test-method status="PASS" signature="getNames()[pri:5, instance:com.test.BaseTest@13b6aecc]" name="getNames" duration-ms="2598" started-at="2020-10-09T10:44:18Z" finished-at="2020-10-09T10:44:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getNames -->
-        <test-method status="PASS" signature="writeExcel()[pri:6, instance:com.test.BaseTest@6ac13091]" name="writeExcel" duration-ms="17622" started-at="2020-10-09T13:19:25 IST" finished-at="2020-10-09T13:19:42 IST">
+        <test-method status="PASS" signature="writeExcel()[pri:6, instance:com.test.BaseTest@13b6aecc]" name="writeExcel" duration-ms="1983" started-at="2020-10-09T10:44:20Z" finished-at="2020-10-09T10:44:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeExcel -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.BaseTest@6ac13091]" name="tearDown" is-config="true" duration-ms="1535" started-at="2020-10-09T13:19:42 IST" finished-at="2020-10-09T13:19:44 IST">
+        <test-method status="PASS" signature="SignOut()[pri:7, instance:com.test.BaseTest@13b6aecc]" name="SignOut" duration-ms="24733" started-at="2020-10-09T10:44:22Z" finished-at="2020-10-09T10:44:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SignOut -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.BaseTest@13b6aecc]" name="tearDown" is-config="true" duration-ms="799" started-at="2020-10-09T10:44:47Z" finished-at="2020-10-09T10:44:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

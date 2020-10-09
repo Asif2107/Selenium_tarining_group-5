@@ -8,6 +8,7 @@
           <include name="FilterSearch"/>
           <include name="tearDown"/>
           <include name="searchtest"/>
+          <include name="config"/>
           <include name="createDriver"/>
         </methods>
       </class> <!-- com.test.BaseTest -->
