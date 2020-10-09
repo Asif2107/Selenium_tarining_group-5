@@ -16,7 +16,7 @@ Properties property;
 //		FileInputStream fs=new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
 //		property = new Properties();
 //		property.load(fs);
-		FileInputStream stream = new FileInputStream("C:\\Users\\user\\Desktop\\CTS_Onboarding\\SeleniumProject\\Selenium_tarining_group-5\\Input_ExcelSheet\\Hospital_Loc.xlsx");
+		FileInputStream stream = new FileInputStream(System.getProperty("user.dir")+"\\Input_ExcelSheet\\Hospital_Loc.xlsx");
 		Workbook wrk = new XSSFWorkbook(stream);
 		Sheet shit=wrk.getSheetAt(0);
 		Row row=shit.getRow(1);
