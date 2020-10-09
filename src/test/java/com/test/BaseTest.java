@@ -18,6 +18,8 @@ import org.testng.annotations.Test;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.excelReadWrite.HospitalName;
+import com.excelReadWrite.WriteData;
 import com.pages.BasePage;
 import com.pages.Page;
 import com.pom.pages.FilterPage;
@@ -25,8 +27,6 @@ import com.pom.pages.HomePage;
 import com.pom.pages.LogoutPage;
 import com.pom.pages.SearchPage;
 import com.pom.pages.loginPage;
-import com.write.HospitalName;
-import com.write.WriteData;
 
 
 
@@ -107,7 +107,7 @@ public class BaseTest {
 	public void doLoginTest()
 	{
 		ExtentTest test= extent.createTest("Login into account");
-		page.getInstance(loginPage.class).dologin("9903723035", "Ranjan@2020");
+		page.getInstance(loginPage.class).dologin_cred();
 		String title=page.getInstance(loginPage.class).getLoginPageTitle();
 		Assert.assertEquals(title, "Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests");
 		extent.flush();
@@ -117,7 +117,7 @@ public class BaseTest {
 	public void searchtest()
 	{
 		ExtentTest test= extent.createTest("Searching");
-		page.getInstance(SearchPage.class).dosearch("Hospital","Chennai");
+		page.getInstance(SearchPage.class).dosearch();
 		String SearchPageTitle=SearchPage.Searchtitle;
 		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Chennai - Book Appointment Online, View Fees, Reviews | Practo");
 		extent.flush();
