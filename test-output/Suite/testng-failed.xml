@@ -3,15 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.test.TestProject">
+      <class name="com.test.BaseTest">
         <methods>
-          <include name="searchtest"/>
+          <include name="FilterSearch"/>
           <include name="tearDown"/>
-          <include name="verifyHomepagePageTest"/>
-          <include name="doLoginTest"/>
+          <include name="config"/>
           <include name="createDriver"/>
         </methods>
-      </class> <!-- com.test.TestProject -->
+      </class> <!-- com.test.BaseTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

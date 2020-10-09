@@ -1,8 +1,10 @@
 package com.test;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -11,6 +13,7 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -32,6 +35,8 @@ public class BaseTest {
 	public Page page;
 	List<String> name=null;
 	ExtentReports extent;
+	Properties property;
+
 
 	@BeforeSuite
 	public void config()
@@ -53,7 +58,8 @@ public class BaseTest {
 	}
 
 	@BeforeTest(description = "Opening Browser")
-	public void createDriver()
+	
+	public void createDriver() throws IOException
 	{
 		
 
@@ -67,8 +73,11 @@ public class BaseTest {
 		    driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			FileInputStream fs=new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+			property = new Properties();
+			property.load(fs);
 			
-			driver.get("https://www.practo.com/");
+			driver.get(property.getProperty("url"));
 			try {
 			Thread.sleep(3000);
 			}catch(Exception e) {
