@@ -1,5 +1,10 @@
 package com.pom.pages;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,6 +19,8 @@ public class loginPage extends BasePage{
 	private By loginButton=By.id("login");
 	private By SigninButton=By.xpath("//a[contains(@class, 'btn-border nav-login nav-interact ')]");
 
+	Properties property;
+	
 	public loginPage(WebDriver driver) {
 		super(driver);
 	}
@@ -45,11 +52,28 @@ public class loginPage extends BasePage{
 	
 
 	
-	public HomePage dologin(String username, String pasw)
+	public HomePage dologin_cred()
 	{
 		getSigninButton().click();
-		getEmailId().sendKeys(username);
-		getPassword().sendKeys(pasw);
+		Title=getLoginPageTitle();
+		System.out.println("Title:-"+Title);
+		FileInputStream fs = null;
+		try {
+			fs = new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
+		} catch (FileNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		property = new Properties();
+		try {
+			property.load(fs);
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		
+		getEmailId().sendKeys(property.getProperty("username"));
+		getPassword().sendKeys(property.getProperty("password"));
 		getLoginButton().click();
 		
 		return getInstance(HomePage.class);

@@ -2,48 +2,48 @@
 <testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="50482" started-at="2020-10-09T19:13:55Z" finished-at="2020-10-09T19:14:45Z">
+  <suite name="Default suite" duration-ms="45167" started-at="2020-10-09T19:29:03Z" finished-at="2020-10-09T19:29:48Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="50482" started-at="2020-10-09T19:13:55Z" finished-at="2020-10-09T19:14:45Z">
+    <test name="Default test" duration-ms="45167" started-at="2020-10-09T19:29:03Z" finished-at="2020-10-09T19:29:48Z">
       <class name="com.test.BaseTest">
-        <test-method status="PASS" signature="config()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="config" is-config="true" duration-ms="406" started-at="2020-10-09T19:13:54Z" finished-at="2020-10-09T19:13:55Z">
+        <test-method status="PASS" signature="config()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="config" is-config="true" duration-ms="417" started-at="2020-10-09T19:29:03Z" finished-at="2020-10-09T19:29:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- config -->
-        <test-method status="PASS" signature="createDriver()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="createDriver" is-config="true" duration-ms="13412" started-at="2020-10-09T19:13:55Z" description="Opening Browser" finished-at="2020-10-09T19:14:08Z">
+        <test-method status="PASS" signature="createDriver()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="createDriver" is-config="true" duration-ms="13477" started-at="2020-10-09T19:29:03Z" description="Opening Browser" finished-at="2020-10-09T19:29:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method status="PASS" signature="verifyHomepagePageTest()[pri:1, instance:com.test.BaseTest@5fbe4146]" name="verifyHomepagePageTest" duration-ms="168" started-at="2020-10-09T19:14:08Z" finished-at="2020-10-09T19:14:08Z">
+        <test-method status="PASS" signature="verifyHomepagePageTest()[pri:1, instance:com.test.BaseTest@5fbe4146]" name="verifyHomepagePageTest" duration-ms="139" started-at="2020-10-09T19:29:17Z" finished-at="2020-10-09T19:29:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyHomepagePageTest -->
-        <test-method status="PASS" signature="doLoginTest()[pri:2, instance:com.test.BaseTest@5fbe4146]" name="doLoginTest" duration-ms="10061" started-at="2020-10-09T19:14:09Z" finished-at="2020-10-09T19:14:19Z">
+        <test-method status="PASS" signature="doLoginTest()[pri:2, instance:com.test.BaseTest@5fbe4146]" name="doLoginTest" duration-ms="5543" started-at="2020-10-09T19:29:17Z" finished-at="2020-10-09T19:29:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- doLoginTest -->
-        <test-method status="PASS" signature="searchtest()[pri:3, instance:com.test.BaseTest@5fbe4146]" name="searchtest" duration-ms="6172" started-at="2020-10-09T19:14:19Z" finished-at="2020-10-09T19:14:26Z">
+        <test-method status="PASS" signature="searchtest()[pri:3, instance:com.test.BaseTest@5fbe4146]" name="searchtest" duration-ms="5747" started-at="2020-10-09T19:29:23Z" finished-at="2020-10-09T19:29:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchtest -->
-        <test-method status="PASS" signature="FilterSearch()[pri:4, instance:com.test.BaseTest@5fbe4146]" name="FilterSearch" duration-ms="9334" started-at="2020-10-09T19:14:28Z" finished-at="2020-10-09T19:14:37Z">
+        <test-method status="PASS" signature="FilterSearch()[pri:4, instance:com.test.BaseTest@5fbe4146]" name="FilterSearch" duration-ms="7827" started-at="2020-10-09T19:29:31Z" finished-at="2020-10-09T19:29:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FilterSearch -->
-        <test-method status="PASS" signature="getNames()[pri:5, instance:com.test.BaseTest@5fbe4146]" name="getNames" duration-ms="452" started-at="2020-10-09T19:14:37Z" finished-at="2020-10-09T19:14:38Z">
+        <test-method status="PASS" signature="getNames()[pri:5, instance:com.test.BaseTest@5fbe4146]" name="getNames" duration-ms="508" started-at="2020-10-09T19:29:41Z" finished-at="2020-10-09T19:29:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getNames -->
-        <test-method status="PASS" signature="SignOut()[pri:6, instance:com.test.BaseTest@5fbe4146]" name="SignOut" duration-ms="4320" started-at="2020-10-09T19:14:38Z" finished-at="2020-10-09T19:14:43Z">
+        <test-method status="PASS" signature="SignOut()[pri:6, instance:com.test.BaseTest@5fbe4146]" name="SignOut" duration-ms="4379" started-at="2020-10-09T19:29:42Z" finished-at="2020-10-09T19:29:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SignOut -->
-        <test-method status="PASS" signature="writeExcel()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="writeExcel" is-config="true" duration-ms="1231" started-at="2020-10-09T19:14:43Z" finished-at="2020-10-09T19:14:44Z">
+        <test-method status="PASS" signature="writeExcel()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="writeExcel" is-config="true" duration-ms="466" started-at="2020-10-09T19:29:47Z" finished-at="2020-10-09T19:29:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- writeExcel -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="tearDown" is-config="true" duration-ms="816" started-at="2020-10-09T19:14:44Z" finished-at="2020-10-09T19:14:45Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.test.BaseTest@5fbe4146]" name="tearDown" is-config="true" duration-ms="703" started-at="2020-10-09T19:29:48Z" finished-at="2020-10-09T19:29:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

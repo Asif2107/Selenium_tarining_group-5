@@ -2,10 +2,14 @@ package com.pom.pages;
 
 
 
+import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Row;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import com.excelReadWrite.ReadData;
 import com.pages.BasePage;
 
 public class SearchPage extends BasePage{
@@ -46,11 +50,30 @@ public class SearchPage extends BasePage{
 	}
 
 
-	public void dosearch(String search,String location){
+	public void dosearch(){
+		ReadData obj = new ReadData();
+		Row r = null;
+		try {
+			r = obj.input_file();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		String location=null;
+		try {
+			location = obj.input_city(r);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		getLocalitybox().clear();
 		getLocalitybox().sendKeys(location);
 		getLocationButton().click();
+		String search=null;
+		try {
+			search = obj.input_searchitem(r);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		getSearchbox().sendKeys(search);
 		getSearchButton().click();
 		Searchtitle=getSearchPageTitle();
