@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="ExplorerTestCase(failed)">
+    <parameter name="browser" value="internetexplorer"/>
     <classes>
       <class name="com.test.BaseTest">
         <methods>
           <include name="FilterSearch"/>
+          <include name="getNames"/>
           <include name="tearDown"/>
           <include name="searchtest"/>
+          <include name="verifyHomepagePageTest"/>
           <include name="config"/>
           <include name="writeExcel"/>
+          <include name="SignOut"/>
+          <include name="doLoginTest"/>
           <include name="createDriver"/>
         </methods>
       </class> <!-- com.test.BaseTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- ExplorerTestCase(failed) -->
+</suite> <!-- Failed suite [Suite] -->

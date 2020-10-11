@@ -1,4 +1,3 @@
-
 package com.test;
 
 import java.io.FileInputStream;
@@ -11,6 +10,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
@@ -65,8 +67,9 @@ public class BaseTest {
 
 	}
 
-	@BeforeTest(description = "Opening Browser")
 	@Parameters("browser")
+	@BeforeTest(description = "Opening Browser")
+	
 	public void createDriver(String browserName) throws IOException
 	{
 		
@@ -82,12 +85,18 @@ public class BaseTest {
 			
 				driver = new ChromeDriver();
 			}
-			 else if(browserName.equalsIgnoreCase("firefox"))
-				{
-				 String FirefoxPath = "D:\\MOM_Data\\geckodriver.exe";
-				 System.setProperty("webdriver.gecko.driver", FirefoxPath );
-				driver = new FirefoxDriver();
-				}
+			 else if(browserName.equalsIgnoreCase("internetexplorer"))
+			 {
+				 
+				 String ExplorerPath = "D:\\InternetExplorer drive\\IEDriverServer.exe";
+					System.setProperty("webdriver.ie.driver", ExplorerPath );
+					
+
+					 driver = new InternetExplorerDriver();		 
+			}
+			 
+			
+			
 			 driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				FileInputStream fs=new FileInputStream(System.getProperty("user.dir")+"\\config.properties");

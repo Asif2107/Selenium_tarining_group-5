@@ -6,10 +6,14 @@
       <class name="com.test.BaseTest">
         <methods>
           <include name="FilterSearch"/>
+          <include name="getNames"/>
           <include name="tearDown"/>
           <include name="searchtest"/>
+          <include name="verifyHomepagePageTest"/>
           <include name="config"/>
           <include name="writeExcel"/>
+          <include name="SignOut"/>
+          <include name="doLoginTest"/>
           <include name="createDriver"/>
         </methods>
       </class> <!-- com.test.BaseTest -->
