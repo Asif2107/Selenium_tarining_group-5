@@ -19,7 +19,7 @@ public class SearchPage extends BasePage{
 	private By Searchbox=By.xpath("//*[contains(@data-qa-id, 'omni-searchbox-keyword')]");
 	private By localitybox=By.xpath("//*[contains(@data-qa-id, 'omni-searchbox-locality')]");
 	private By SearchButton=By.xpath("//*[@class='c-omni-suggestion-item__content__title' and text()='Hospital']");
-	private By locationButton=By.xpath("//div[@class='c-omni-suggestion-item__content__title' and text()='Chennai']");
+	private By locationButton=By.xpath("//div[@class='c-omni-suggestion-item__content__title' and text()='Delhi']");
 
 	public SearchPage(WebDriver driver) {
 		super(driver);
@@ -50,11 +50,11 @@ public class SearchPage extends BasePage{
 	}
 
 
-	public void dosearch(){
+	public void dosearch(int n){
 		ReadData obj = new ReadData();
 		Row r = null;
 		try {
-			r = obj.input_file();
+			r = obj.input_file(n);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
