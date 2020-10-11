@@ -9,6 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.CapabilityType;
@@ -63,12 +64,13 @@ public class BaseTest {
 
 		extent.attachReporter(reporter);
 		
-		extent.setSystemInfo("Tester", "Rajarshee Das");
+		extent.setSystemInfo("Tester", "Selenium Trining Group 5");
 
 	}
 
-	@Parameters("browser")
+	
 	@BeforeTest(description = "Opening Browser")
+	@Parameters("browser")
 	
 	public void createDriver(String browserName) throws IOException
 	{
@@ -80,19 +82,19 @@ public class BaseTest {
 			
 			 if(browserName.equalsIgnoreCase("chrome"))
 			{
-				String ChromePath = "D:\\Selenium_tarining_group-5-master\\Chrome_Driver\\chromedriver.exe";
+				String ChromePath = ".\\Driver\\chromedriver.exe";
 				System.setProperty("webdriver.chrome.driver", ChromePath );
 			
 				driver = new ChromeDriver();
 			}
-			 else if(browserName.equalsIgnoreCase("internetexplorer"))
+			 else if(browserName.equalsIgnoreCase("msedge"))
 			 {
 				 
-				 String ExplorerPath = "D:\\InternetExplorer drive\\IEDriverServer.exe";
-					System.setProperty("webdriver.ie.driver", ExplorerPath );
+				 String ExplorerPath = ".\\Driver\\msedgedriver.exe";
+					System.setProperty("webdriver.edge.driver", ExplorerPath );
 					
 
-					 driver = new InternetExplorerDriver();		 
+					 driver = new EdgeDriver();		 
 			}
 			 
 			

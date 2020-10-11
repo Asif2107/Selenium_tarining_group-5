@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="ExplorerTestCase(failed)">
-    <parameter name="browser" value="internetexplorer"/>
+  <test thread-count="5" name="Automation of practo.com in Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.test.BaseTest">
         <methods>
@@ -19,5 +19,5 @@
         </methods>
       </class> <!-- com.test.BaseTest -->
     </classes>
-  </test> <!-- ExplorerTestCase(failed) -->
+  </test> <!-- Automation of practo.com in Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->
