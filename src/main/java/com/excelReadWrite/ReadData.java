@@ -12,14 +12,14 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ReadData {
 Properties property;
 	
-	public Row input_file() throws IOException {
+	public Row input_file(int n) throws IOException {
 //		FileInputStream fs=new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
 //		property = new Properties();
 //		property.load(fs);
 		FileInputStream stream = new FileInputStream(System.getProperty("user.dir")+"\\Input_ExcelSheet\\Hospital_Loc.xlsx");
 		Workbook wrk = new XSSFWorkbook(stream);
 		Sheet shit=wrk.getSheetAt(0);
-		Row row=shit.getRow(1);
+		Row row=shit.getRow(n);
 		return row;
 		
 	}
