@@ -147,7 +147,7 @@ public class BaseTest {
 	public void searchtest()
 	{
 		ExtentTest test= extent.createTest("Searching");
-		page.getInstance(SearchPage.class).dosearch();
+		page.getInstance(SearchPage.class).dosearch(1);
 		String SearchPageTitle=SearchPage.Searchtitle;
 		log.info("Searching the hospital name");
 		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Chennai - Book Appointment Online, View Fees, Reviews | Practo");
@@ -186,7 +186,16 @@ public class BaseTest {
 		extent.flush();
 	}
 	
-	
+	@Test(priority=7)
+		public void invsearchtest()
+		{
+			ExtentTest test= extent.createTest("Searvhing international hospitals");
+			page.getInstance(SearchPage.class).dosearch(2);
+			String SearchPageTitle=SearchPage.Searchtitle;
+			log.info("Searching the hospital name");
+			//Assert.assertEquals(SearchPageTitle, "Best Hospitals in Chennai - Book Appointment Online, View Fees, Reviews | Practo");
+			extent.flush();
+		}
 	
 
 		
