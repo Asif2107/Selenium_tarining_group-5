@@ -1,0 +1,6 @@
+2020-10-12 12:58:52,321 - com.test.BaseTest -INFO - Entering in application url
+2020-10-12 12:58:55,558 - com.test.BaseTest -INFO - Entering into a homepage
+2020-10-12 12:58:56,005 - com.test.BaseTest -INFO - The Title of of webpage is--->Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests
+2020-10-12 12:59:06,445 - com.test.BaseTest -INFO - Performing the login test 
+2020-10-12 12:59:18,571 - com.test.BaseTest -INFO - Searching the hospital name
+2020-10-12 12:59:39,813 - com.test.BaseTest -INFO - Writing into a excel sheet

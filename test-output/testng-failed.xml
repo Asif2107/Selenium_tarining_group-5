@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Automation of practo.com in Chrome(failed)">
-    <parameter name="browser" value="chrome"/>
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="browser" value="param-val-not-found"/>
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.test.BaseTest">
         <methods>
           <include name="FilterSearch"/>
           <include name="getNames"/>
+          <include name="invsearchtest"/>
           <include name="tearDown"/>
           <include name="searchtest"/>
           <include name="verifyHomepagePageTest"/>
@@ -19,5 +20,5 @@
         </methods>
       </class> <!-- com.test.BaseTest -->
     </classes>
-  </test> <!-- Automation of practo.com in Chrome(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -17,6 +17,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
@@ -47,12 +48,15 @@ public class BaseTest {
 	List<String> name=null;
 	ExtentReports extent;
 	Properties property;
+	//ExtentTest test;
 	Logger log = Logger.getLogger(BaseTest.class);
 
-	@BeforeSuite
-	public void config()
+
+	@Parameters("browser")
+	@BeforeClass(description = "Opening Browser")
+	public void createDriver(String browserName) throws IOException
 	{
-		String path =System.getProperty("user.dir")+"\\Reports\\index.html";
+		String path =System.getProperty("user.dir")+"\\Reports\\Extent_Report.html";
 
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 
@@ -66,17 +70,14 @@ public class BaseTest {
 		
 		extent.setSystemInfo("Tester", "Selenium Trining Group 5");
 
-	}
+	
 
 	
-	@BeforeTest(description = "Opening Browser")
-	@Parameters("browser")
 	
-	public void createDriver(String browserName) throws IOException
-	{
+	
 		
 
-			ExtentTest test= extent.createTest("Create Driver");
+			//test= extent.createTest("Create Driver","passed");
 						
 
 			
@@ -87,6 +88,9 @@ public class BaseTest {
 			
 				driver = new ChromeDriver();
 			}
+			 
+			
+					 
 			 else if(browserName.equalsIgnoreCase("msedge"))
 			 {
 				 
@@ -100,13 +104,14 @@ public class BaseTest {
 			
 			
 			 driver.manage().window().maximize();
-				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+				
 				FileInputStream fs=new FileInputStream(System.getProperty("user.dir")+"\\config.properties");
 				property = new Properties();
 				property.load(fs);
 				
 				driver.get(property.getProperty("url"));
 				log.info("Entering in application url");
+				
 				try {
 				Thread.sleep(3000);
 				}catch(Exception e) {
@@ -115,13 +120,13 @@ public class BaseTest {
 				
 				page=new BasePage(driver);
 				log.info("Entering into a homepage");
-			extent.flush();
+			//extent.flush();
 	}
 	
 	@Test(priority=1)
 	public void verifyHomepagePageTest()
 	{
-		ExtentTest test= extent.createTest("Verify Home Page");
+		ExtentTest test= extent.createTest("Verify Home Page","passed");
 		String title=page.getInstance(HomePage.class).getHomePageTItle();
 		String header=page.getInstance(HomePage.class).getHomePageHeader();
 		System.out.println("Title:-"+title);
@@ -150,7 +155,7 @@ public class BaseTest {
 		page.getInstance(SearchPage.class).dosearch(1);
 		String SearchPageTitle=SearchPage.Searchtitle;
 		log.info("Searching the hospital name");
-		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Chennai - Book Appointment Online, View Fees, Reviews | Practo");
+		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Delhi - Book Appointment Online, View Fees, Reviews | Practo");
 		extent.flush();
 	}
 	
@@ -170,7 +175,7 @@ public class BaseTest {
 		extent.flush();
 	}
 	
-	@AfterClass
+	@Test(priority=6)
 	public void writeExcel()throws FileNotFoundException, IOException 
 	{
 		ExtentTest test= extent.createTest("Write in Excel");
@@ -179,17 +184,17 @@ public class BaseTest {
 		extent.flush();
 	}
 	
-	@Test(priority=6)
+	@Test(priority=7)
 	public void SignOut() {
 		ExtentTest test= extent.createTest("Check Out from the account");
 		page.getInstance(LogoutPage.class).logOut();
 		extent.flush();
 	}
 	
-	@Test(priority=7)
+	@Test(priority=8)
 		public void invsearchtest()
 		{
-			ExtentTest test= extent.createTest("Searvhing international hospitals");
+		ExtentTest test= extent.createTest("Searvhing international hospitals");
 			page.getInstance(SearchPage.class).dosearch(2);
 			String SearchPageTitle=SearchPage.Searchtitle;
 			log.info("Searching the hospital name");
@@ -199,10 +204,10 @@ public class BaseTest {
 	
 
 		
-	@AfterTest
+	@AfterClass
 	public void tearDown() 
 	{
-		ExtentTest test= extent.createTest("Close Browser");
+		//test= extent.createTest("Close Browser");
 		driver.quit();
 		extent.flush();
 		
