@@ -1,4 +1,4 @@
-package com.pom.pages;
+package com.pom.utilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

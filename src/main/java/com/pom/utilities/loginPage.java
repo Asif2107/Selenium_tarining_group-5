@@ -1,4 +1,4 @@
-package com.pom.pages;
+package com.pom.utilities;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

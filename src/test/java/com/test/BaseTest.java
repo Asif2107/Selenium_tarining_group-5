@@ -23,6 +23,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.ScreenShot.CustomListener;
 import com.aventstack.extentreports.ExtentReports;
@@ -32,31 +33,33 @@ import com.excelReadWrite.HospitalName;
 import com.excelReadWrite.WriteData;
 import com.pages.BasePage;
 import com.pages.Page;
-import com.pom.pages.FilterPage;
-import com.pom.pages.HomePage;
-import com.pom.pages.LogoutPage;
-import com.pom.pages.SearchPage;
-import com.pom.pages.loginPage;
+import com.pom.utilities.Driver_Setup;
+import com.pom.utilities.FilterPage;
+import com.pom.utilities.HomePage;
+import com.pom.utilities.LogoutPage;
+import com.pom.utilities.SearchPage;
+import com.pom.utilities.loginPage;
+
 import org.apache.log4j.Logger;
 
 @Listeners(CustomListener.class)
 public class BaseTest {
-	
 	
 	public static WebDriver driver;
 	public Page page;
 	List<String> name=null;
 	ExtentReports extent;
 	Properties property;
-	//ExtentTest test;
+	ExtentTest test;
 	Logger log = Logger.getLogger(BaseTest.class);
 
 
-	@Parameters("browser")
+	
 	@BeforeClass(description = "Opening Browser")
+	@Parameters("browser")
 	public void createDriver(String browserName) throws IOException
 	{
-		String path =System.getProperty("user.dir")+"\\Reports\\Extent_Report.html";
+		String path =System.getProperty("user.dir")+"\\Reports\\ExtentReport.html";
 
 		ExtentSparkReporter reporter = new ExtentSparkReporter(path);
 
@@ -83,10 +86,10 @@ public class BaseTest {
 			
 			 if(browserName.equalsIgnoreCase("chrome"))
 			{
-				String ChromePath = ".\\Driver\\chromedriver.exe";
-				System.setProperty("webdriver.chrome.driver", ChromePath );
-			
-				driver = new ChromeDriver();
+				 Driver_Setup obj = new Driver_Setup();
+					
+					driver=obj.getChromeDriver();
+					log.info("*******Launching Chrome Driver**********");
 			}
 			 
 			
@@ -94,11 +97,10 @@ public class BaseTest {
 			 else if(browserName.equalsIgnoreCase("msedge"))
 			 {
 				 
-				 String ExplorerPath = ".\\Driver\\msedgedriver.exe";
-					System.setProperty("webdriver.edge.driver", ExplorerPath );
+				 Driver_Setup obj = new Driver_Setup();
 					
-
-					 driver = new EdgeDriver();		 
+					driver=obj.getEdgeDriver();
+					log.info("*******Launching Edge Driver**********");	 
 			}
 			 
 			
@@ -126,85 +128,89 @@ public class BaseTest {
 	@Test(priority=1)
 	public void verifyHomepagePageTest()
 	{
-		ExtentTest test= extent.createTest("Verify Home Page","passed");
+		test= extent.createTest("Verify Home Page","passed");
 		String title=page.getInstance(HomePage.class).getHomePageTItle();
 		String header=page.getInstance(HomePage.class).getHomePageHeader();
 		System.out.println("Title:-"+title);
 		log.info("The Title of of webpage is--->"+title);
 		System.out.println(header);
 		Assert.assertEquals(header, "How Practo is Helping India Fight COVID-19");
-		extent.flush();
+		//extent.flush();
 	}
 
 	
 	@Test(priority=2)
 	public void doLoginTest()
 	{
-		ExtentTest test= extent.createTest("Login into account");
+		test= extent.createTest("Login into account","passed");
 		page.getInstance(loginPage.class).dologin_cred();
 		log.info("Performing the login test ");
 		String title=page.getInstance(loginPage.class).getLoginPageTitle();
 		Assert.assertEquals(title, "Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests");
-		extent.flush();
+		//extent.flush();
 	}
 	
 	@Test(priority=3)
 	public void searchtest()
 	{
-		ExtentTest test= extent.createTest("Searching");
+		test= extent.createTest("Searching","passed");
 		page.getInstance(SearchPage.class).dosearch(1);
 		String SearchPageTitle=SearchPage.Searchtitle;
 		log.info("Searching the hospital name");
 		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Delhi - Book Appointment Online, View Fees, Reviews | Practo");
-		extent.flush();
+		//extent.flush();
 	}
 	
 	@Test(priority=4)
 	public void FilterSearch() throws Exception
 	{
-		ExtentTest test= extent.createTest("Apply filters");
+		test= extent.createTest("Apply filters","passed");
 		page.getInstance(FilterPage.class).dofilter();
-		extent.flush();
+		//extent.flush();
 	}
 	
 	@Test(priority=5)
 	public void getNames()
 	{
-		ExtentTest test= extent.createTest("Get Names of Hospitals");
+		test= extent.createTest("Get Names of Hospitals","passed");
 		name=page.getInstance(HospitalName.class).showHospitalName();
-		extent.flush();
+		//extent.flush();
 	}
 	
 	@Test(priority=6)
 	public void writeExcel()throws FileNotFoundException, IOException 
 	{
-		ExtentTest test= extent.createTest("Write in Excel");
+		test= extent.createTest("Write in Excel","passed");
 		log.info("Writing into a excel sheet");
 		page.getInstance(WriteData.class).doWrite(name);
-		extent.flush();
+		//extent.flush();
 	}
 	
 	@Test(priority=7)
 	public void SignOut() {
-		ExtentTest test= extent.createTest("Check Out from the account");
+		test= extent.createTest("Log Out from the account","passed");
 		page.getInstance(LogoutPage.class).logOut();
-		extent.flush();
+		//extent.flush();
 	}
 	
 	@Test(priority=8)
 		public void invsearchtest()
 		{
-		ExtentTest test= extent.createTest("Searvhing international hospitals");
-			page.getInstance(SearchPage.class).dosearch(2);
+		test= extent.createTest("Searching international hospitals","failed");
+			
 			String SearchPageTitle=SearchPage.Searchtitle;
 			log.info("Searching the hospital name");
-			//Assert.assertEquals(SearchPageTitle, "Best Hospitals in Chennai - Book Appointment Online, View Fees, Reviews | Practo");
-			extent.flush();
+			SoftAssert sa=new SoftAssert();
+			sa.assertTrue(page.getInstance(SearchPage.class).dosearch(2));
+			//sa.assertEquals(SearchPageTitle, "Best Hospitals in London - Book Appointment Online, View Fees, Reviews | Practo");
+			//test.fail("Wrong hospital search");
+			//Assert.assertEquals(SearchPageTitle, "Best Hospitals in London - Book Appointment Online, View Fees, Reviews | Practo");
+			//extent.flush();
 		}
 	
 
 		
-	@AfterClass
+	@AfterTest
 	public void tearDown() 
 	{
 		//test= extent.createTest("Close Browser");
@@ -223,5 +229,4 @@ public class BaseTest {
 		
 	}
 	
-
 }

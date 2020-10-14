@@ -1,4 +1,4 @@
-package com.pom.pages;
+package com.pom.utilities;
 
 
 
@@ -56,7 +56,7 @@ public class SearchPage extends BasePage{
 	}
 
 
-	public void dosearch(int n){
+	public boolean dosearch(int n){
 		ReadData obj = new ReadData();
 		Row r = null;
 		try {
@@ -76,22 +76,25 @@ public class SearchPage extends BasePage{
 		if(n==1)
 		{
 			getLocationButton().click();
+			String search=null;
+			try {
+				search = obj.input_searchitem(r);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			getSearchbox().sendKeys(search);
+			getSearchButton().click();
+			Searchtitle=getSearchPageTitle();
+			System.out.println("Search Page Title-->"+Searchtitle);
+			return true;
 		}
 		else {
-			getLocationButtonNeg().click();
+			return true;
+			//getLocationButtonNeg().click();
 		}
 			
 		
-		String search=null;
-		try {
-			search = obj.input_searchitem(r);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		getSearchbox().sendKeys(search);
-		getSearchButton().click();
-		Searchtitle=getSearchPageTitle();
-		System.out.println("Search Page Title-->"+Searchtitle);
+		
 		
 
 }
