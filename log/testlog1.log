@@ -20,3 +20,19 @@
 [main] INFO com.test.BaseTest - Searching the hospital name
 [main] INFO com.test.BaseTest - Writing into a excel sheet
 [main] INFO com.test.BaseTest - Searching the hospital name
+[main] INFO com.test.BaseTest - *******Launching Chrome Driver**********
+[main] INFO com.test.BaseTest - Entering in application url
+[main] INFO com.test.BaseTest - Entering into a homepage
+[main] INFO com.test.BaseTest - The Title of of webpage is--->Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests
+[main] INFO com.test.BaseTest - Performing the login test 
+[main] INFO com.test.BaseTest - Searching the hospital name
+[main] INFO com.test.BaseTest - Writing into a excel sheet
+[main] INFO com.test.BaseTest - Searching the hospital name
+[main] INFO com.test.BaseTest - *******Launching Edge Driver**********
+[main] INFO com.test.BaseTest - Entering in application url
+[main] INFO com.test.BaseTest - Entering into a homepage
+[main] INFO com.test.BaseTest - The Title of of webpage is--->Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests
+[main] INFO com.test.BaseTest - Performing the login test 
+[main] INFO com.test.BaseTest - Searching the hospital name
+[main] INFO com.test.BaseTest - Writing into a excel sheet
+[main] INFO com.test.BaseTest - Searching the hospital name

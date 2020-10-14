@@ -20,3 +20,19 @@
 2020-10-14 08:19:31,169 - com.test.BaseTest -INFO - Searching the hospital name
 2020-10-14 08:19:47,701 - com.test.BaseTest -INFO - Writing into a excel sheet
 2020-10-14 08:19:54,853 - com.test.BaseTest -INFO - Searching the hospital name
+2020-10-14 09:29:32,488 - com.test.BaseTest -INFO - *******Launching Chrome Driver**********
+2020-10-14 09:29:41,079 - com.test.BaseTest -INFO - Entering in application url
+2020-10-14 09:29:46,345 - com.test.BaseTest -INFO - Entering into a homepage
+2020-10-14 09:29:49,092 - com.test.BaseTest -INFO - The Title of of webpage is--->Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests
+2020-10-14 09:29:58,830 - com.test.BaseTest -INFO - Performing the login test 
+2020-10-14 09:30:19,009 - com.test.BaseTest -INFO - Searching the hospital name
+2020-10-14 09:30:31,049 - com.test.BaseTest -INFO - Writing into a excel sheet
+2020-10-14 09:30:42,119 - com.test.BaseTest -INFO - Searching the hospital name
+2020-10-14 09:31:13,074 - com.test.BaseTest -INFO - *******Launching Edge Driver**********
+2020-10-14 09:31:24,768 - com.test.BaseTest -INFO - Entering in application url
+2020-10-14 09:31:27,769 - com.test.BaseTest -INFO - Entering into a homepage
+2020-10-14 09:31:27,958 - com.test.BaseTest -INFO - The Title of of webpage is--->Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests
+2020-10-14 09:31:37,027 - com.test.BaseTest -INFO - Performing the login test 
+2020-10-14 09:31:45,402 - com.test.BaseTest -INFO - Searching the hospital name
+2020-10-14 09:31:55,853 - com.test.BaseTest -INFO - Writing into a excel sheet
+2020-10-14 09:32:03,787 - com.test.BaseTest -INFO - Searching the hospital name

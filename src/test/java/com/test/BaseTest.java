@@ -112,7 +112,7 @@ public class BaseTest {
 				property.load(fs);
 				
 				driver.get(property.getProperty("url"));
-				log.info("Entering in application url");
+				log.info("**********Entering in application url**********");
 				
 				try {
 				Thread.sleep(3000);
@@ -121,85 +121,88 @@ public class BaseTest {
 				}
 				
 				page=new BasePage(driver);
-				log.info("Entering into a homepage");
+				log.info("**********Entering into a homepage**********");
 			//extent.flush();
 	}
 	
-	@Test(priority=1)
+	@Test(priority=1, groups= {"smoke"})
 	public void verifyHomepagePageTest()
 	{
 		test= extent.createTest("Verify Home Page","passed");
 		String title=page.getInstance(HomePage.class).getHomePageTItle();
 		String header=page.getInstance(HomePage.class).getHomePageHeader();
 		System.out.println("Title:-"+title);
-		log.info("The Title of of webpage is--->"+title);
+		log.info("**********The Title of of webpage is--->"+title+"**********");
 		System.out.println(header);
 		Assert.assertEquals(header, "How Practo is Helping India Fight COVID-19");
 		//extent.flush();
 	}
 
 	
-	@Test(priority=2)
+	@Test(priority=2, groups= {"smoke","regression"})
 	public void doLoginTest()
 	{
 		test= extent.createTest("Login into account","passed");
 		page.getInstance(loginPage.class).dologin_cred();
-		log.info("Performing the login test ");
+		log.info("**********Performing the login test **********");
 		String title=page.getInstance(loginPage.class).getLoginPageTitle();
 		Assert.assertEquals(title, "Practo | Video Consultation with Doctors, Book Doctor Appointments, Order Medicine, Diagnostic Tests");
 		//extent.flush();
 	}
 	
-	@Test(priority=3)
+	@Test(priority=3, groups= {"smoke","regression"})
 	public void searchtest()
 	{
 		test= extent.createTest("Searching","passed");
 		page.getInstance(SearchPage.class).dosearch(1);
 		String SearchPageTitle=SearchPage.Searchtitle;
-		log.info("Searching the hospital name");
+		log.info("**********Searching the hospital name**********");
 		Assert.assertEquals(SearchPageTitle, "Best Hospitals in Delhi - Book Appointment Online, View Fees, Reviews | Practo");
 		//extent.flush();
 	}
 	
-	@Test(priority=4)
+	@Test(priority=4, groups= {"smoke","regression"})
 	public void FilterSearch() throws Exception
 	{
 		test= extent.createTest("Apply filters","passed");
 		page.getInstance(FilterPage.class).dofilter();
+		log.info("**********Applying the neccessary filters**********");
 		//extent.flush();
 	}
 	
-	@Test(priority=5)
+	@Test(priority=5, groups= {"regression"})
 	public void getNames()
 	{
 		test= extent.createTest("Get Names of Hospitals","passed");
 		name=page.getInstance(HospitalName.class).showHospitalName();
+		log.info("**********Getting Hospital names**********");
 		//extent.flush();
 	}
 	
-	@Test(priority=6)
+	@Test(priority=6, groups= {"regression"})
 	public void writeExcel()throws FileNotFoundException, IOException 
 	{
 		test= extent.createTest("Write in Excel","passed");
-		log.info("Writing into a excel sheet");
+		log.info("**********Writing into a excel sheet**********");
 		page.getInstance(WriteData.class).doWrite(name);
 		//extent.flush();
 	}
 	
-	@Test(priority=7)
+	@Test(priority=7, groups= {"smoke","regression"})
 	public void SignOut() {
 		test= extent.createTest("Log Out from the account","passed");
 		page.getInstance(LogoutPage.class).logOut();
+		log.info("**********Signing Out from Account**********");
 		//extent.flush();
 	}
 	
-	@Test(priority=8)
+	@Test(priority=8, groups= {"smoke","regression"})
 		public void invsearchtest()
 		{
 		test= extent.createTest("Searching international hospitals","failed");
 			
 			String SearchPageTitle=SearchPage.Searchtitle;
-			log.info("Searching the hospital name");
+			log.info("**********Searching International hospital location**********");
 			SoftAssert sa=new SoftAssert();
 			sa.assertTrue(page.getInstance(SearchPage.class).dosearch(2));
 			//sa.assertEquals(SearchPageTitle, "Best Hospitals in London - Book Appointment Online, View Fees, Reviews | Practo");
